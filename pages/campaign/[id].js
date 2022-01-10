@@ -208,7 +208,7 @@ export default function CampaignSingle({
                 {description}
               </Text>
               <Link
-                color="purple.500"
+                color="teal.500"
                 href={`https://rinkeby.etherscan.io/address/${id}`}
                 isExternal
               >
@@ -277,7 +277,7 @@ export default function CampaignSingle({
                       px="4"
                     >
                       <InfoIcon
-                        color={useColorModeValue("purple.800", "white")}
+                        color={useColorModeValue("teal.800", "white")}
                       />
                     </Tooltip>
                   </StatLabel>
@@ -317,8 +317,7 @@ export default function CampaignSingle({
                       target of {web3.utils.fromWei(target, "ether")} ETH ({getWEIPriceInVND(ETHPrice, target)})
                     </Text>
                     <Progress
-                      colorScheme="purple"
-                      hasStripe
+                      colorScheme="teal"
                       size="sm"
                       value={web3.utils.fromWei(balance, "ether")}
                       max={web3.utils.fromWei(target, "ether")}
@@ -337,7 +336,7 @@ export default function CampaignSingle({
                 <Heading
                   lineHeight={1.1}
                   fontSize={{ base: "2xl", sm: "3xl" }}
-                  color={useColorModeValue("purple.600", "purple.200")}
+                  color={useColorModeValue("teal.600", "teal.200")}
                 >
                   Contribute Now!
                 </Heading>
@@ -351,7 +350,6 @@ export default function CampaignSingle({
                       <InputGroup>
                         {" "}
                         <Input
-                          focusBorderColor="purple.400"
                           {...register("value", { required: true })}
                           type="number"
                           isDisabled={formState.isSubmitting}
@@ -396,7 +394,7 @@ export default function CampaignSingle({
                           Contribute
                         </Button>
                       ) : (
-                        <Alert status="warning" mt={4} variant={"left-accent"}>
+                        <Alert status="warning" mt={4}>
                           <AlertIcon />
                           <AlertDescription mr={2}>
                             Please Connect Your Wallet to Contribute
@@ -419,10 +417,10 @@ export default function CampaignSingle({
                   <Button
                     fontFamily={"heading"}
                     w={"full"}
-                    bgGradient="linear(to-r, purple.400,green.400)"
+                    bgGradient="linear(to-r, teal.400,green.400)"
                     color={"white"}
                     _hover={{
-                      bgGradient: "linear(to-r, purple.400,blue.400)",
+                      bgGradient: "linear(to-r, teal.400,blue.400)",
                       boxShadow: "xl",
                     }}
                   >
@@ -431,7 +429,7 @@ export default function CampaignSingle({
                 </NextLink>
                 <Text fontSize={"sm"}>
                   * You can see where these funds are being used & if you have
-                  contributed you can also approve those Withdrawal Requests
+                  contributed you can also approve those Withdrawal Requests :)
                 </Text>
               </Stack>
             </Stack>
